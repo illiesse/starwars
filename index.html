@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Stars Wars</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+	<main>
+		<header>
+			<img src="titre.png">
+		</header>
+		<section id="recherche">		
+			<button type="button" class="btn btn-light button_search">Chercher</button>
+			<div id="formulaire">
+				<table class="table-dark table-striped">
+					<thead>
+					    <tr>
+					    	<th scope="col">Personnages</th>
+					    </tr>
+					</thead>
+					<tbody id="character_list">
+						<tr>
+					    </tr>
+					</tbody>
+				</table>
+				<table class="table-dark table-striped">
+					<thead>
+					    <tr>
+					    	<th scope="col">Panète</th>
+					    </tr>
+					</thead>
+					<tbody id="planet_list">
+						<tr>
+					    </tr>
+					</tbody>
+				</table>
+			<div>
+			<div class="modal" tabindex="-1" role="dialog">
+				<div class="modal-dialog" role="document">
+				    <div class="modal-content">
+				    	<div class="modal-header">
+				        	<h5 class="modal-title">Recherche</h5>
+				        	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				          	<span aria-hidden="true">&times;</span>
+				        	</button>
+				      	</div>
+				      	<div class="modal-body">
+				        	<form id="formu">
+				        		<div>
+				        			Votre requête:<br>
+  									<input type="text" name="request" id="request">
+  								</div>
+				        	</form>
+				      	</div>
+				      	<div class="modal-footer">
+				        	<button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+				        	<button type="button" class="btn btn-primary" id="people_search">Sur les personnages</button>
+				        	<button type="button" class="btn btn-primary" id="planet_search">Sur les planètes</button>
+				      	</div>
+				    </div>
+				</div>
+			</div>
+		</section>
+
+	<main>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
+
+<!-- <section id="starwars">
+	<div id="characters">
+		<button id="dowload">Charger 10 personnages</button>
+		<div id="choice">
+			<button id="before">10 précédents</button>
+			<button id="next">10 suivants</button>
+		</div>
+
+		<div id="stars">
+			<div id="name"></div>
+			<div id="details"></div>
+		</div>
+	</div>
+</section> -->
+
+<!-- <section id="planete">
+	<div id="planets">
+		<button id="dowload">Charger 10 planètes</button>
+		<div id="choice">
+			<button id="before">10 précédents</button>
+			<button id="next">10 suivants</button>
+		</div>
+
+		<div id="planet">
+			<div id="name"></div>
+			<div id="details"></div>
+		</div>
+	</div>
+</section> -->

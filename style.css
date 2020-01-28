@@ -1,0 +1,66 @@
+* {
+	margin: 0;
+}
+
+body {
+	/*background: url("backstar.jpeg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;*/
+	/*background-color: black;*/
+	/*color: white;*/
+}
+
+main {
+	display: flex;
+	/*color: white;*/
+}
+
+li{
+	list-style: none;
+	display: flex;
+}
+
+a{
+	color: white;
+}
+
+header {
+	display: flex;
+	justify-content: center;
+}
+
+header img {
+	width: 25%;
+	margin-left: 60%;
+
+}
+
+section {
+	display: flex;
+	justify-content: flex-end;
+}
+
+#before {
+	display: none;
+}
+
+#next {
+	display: none;
+}
+
+#stars {
+	display: flex;
+}
+
+#choice {
+	display: flex;
+}
+
+table {
+	width: 40%;
+}
+
+#formulaire {
+	display: flex;
+}
