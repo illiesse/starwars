@@ -19,10 +19,10 @@ function people_search() {
 		   search : $("#request").val(),
 	},
 	success: function(show_people){
-		console.log(show_people.results[1].name)
+		// console.log(show_people.results[1].name)
 		$('.modal').modal('hide');
 		$("#character_list").html("");
-			for (let i = 0; i < show_people.length; i++) {
+			for (let i = 0; i < show_people.results.length; i++) {
 				$("#character_list").append("<tr><td>"+show_people.results[i].name+"</td></tr>")
 			};
 	},
@@ -36,7 +36,7 @@ $("#planet_search").on("click", function(){
 
 function planet_search() {
 	$.ajax({
-	url: 'https://swapi.co/api/planet/',
+	url: 'https://swapi.co/api/planets/',
 	type: "GET",
 	data: {
 		   search : $("#request").val(),
@@ -45,8 +45,8 @@ function planet_search() {
 		// console.log(show_planet)
 		$('.modal').modal('hide');
 		$("#planet_list").html("");
-			for (let i = 0; i < show_planet.length; i++) {
-				$("#planet_list").append("<tr><td>"+show_planet.results[i].homeworld+"</td></tr>")
+			for (let i = 0; i < show_planet.results.length; i++) {
+				$("#planet_list").append("<tr><td>"+show_planet.results[i].name+"</td></tr>")
 			};
 	},
 	dataType: "json"

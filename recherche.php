@@ -1,15 +1,16 @@
 <?php
-
-include ('header.php');
+include ('templates/header.php');
 ?>
 
-<section id="recherche">		
-	<button type="button" class="btn btn-light button_search">Chercher</button>
+<section id="recherche">
+	<div id="search">	
+		<button type="button" class="btn btn-light button_search">Chercher</button>
+	</div>
 	<div id="formulaire">
 		<table class="table-dark table-striped">
 			<thead>
 			    <tr>
-			    	<th scope="col">Personnage</th>
+			    	<th scope="col">Personnages</th>
 			    </tr>
 			</thead>
 			<tbody id="character_list">
@@ -18,7 +19,7 @@ include ('header.php');
 		<table class="table-dark table-striped">
 			<thead>
 			    <tr>
-			    	<th scope="col">Planète</th>
+			    	<th scope="col">Planètes</th>
 			    </tr>
 			</thead>
 			<tbody id="planet_list">
@@ -53,5 +54,6 @@ include ('header.php');
 </section>
 
 <?php
-$s_path  = "recherche.js";
-include ('footer.php');
+$s_path  = "js/recherche.js";
+$s_path2  = "js/starwars.js";
+include ('templates/footer.php');

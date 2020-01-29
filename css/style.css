@@ -1,0 +1,259 @@
+* {
+	margin: 0;
+}
+
+@font-face {
+	font-family: "Starjhol";
+	src: url('../fonts/Starjhol.ttf');
+}
+
+@font-face {
+	font-family: "Starjedi";
+	src: url('../fonts/Starjedi.ttf');
+}
+
+body {
+	background: url("../images/fond.jpg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+main {
+	margin-left: 2%;
+}
+
+header {
+	display: flex;
+	flex-direction: column;
+	max-width: 50%;
+}
+
+h1 {
+	text-align: center;
+	font-family: 'Starjhol';
+	font-size: 3.4rem;
+	font-weight: bold;
+	color: white;
+}
+
+li{
+	list-style: none;
+	display: flex;
+	font-family: 'Starjedi';
+}
+
+a{
+	color: white;
+}
+
+a.one:hover, a.two:hover {
+	color: red;
+}
+
+section {
+	display: flex;
+	max-width: 50%;
+	justify-content: center;
+}
+
+.fa-bars {
+	visibility: hidden;
+	font-size: 0.1px;
+}
+
+.btn {
+	font-family: 'Starjedi';
+	margin-bottom: 3%;
+}
+
+#dowload {
+	width: 60%;
+	align-self: center;
+}
+
+.button_search {
+	width: 30%;
+	align-self: center;
+}
+
+#characters, #planets, #search {
+	width: 82%;
+	display: flex;
+	flex-direction: column;
+}
+
+#choice {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+}
+
+#before {
+	display: none;
+}
+
+#next {
+	display: none;
+}
+
+#stars, #planet {
+	display: flex;
+	justify-content: space-between;
+	text-align: center;
+	color: white;
+	overflow:auto;
+	height: 50vh;
+	width: 150%;
+	/*scrollbar-color: white;*/
+}
+	
+#formulaire{
+	overflow:auto;
+	height: 50vh;
+	width: 100%;
+}
+
+#name {
+	width: 40%;
+	font-weight: bold;
+}
+
+#voir_details {
+	width: 20%;
+	font-weight: bold;
+}
+
+#details {
+	width: 40%;
+	font-weight: bold;
+}
+
+table {
+	width: 40%;
+}
+
+#formulaire {
+	display: flex;
+	justify-content: space-between;
+}
+
+th,td {
+	height: 2.2rem;
+}
+
+table {
+	text-align: center;
+	border: 1px solid white;
+	border-collapse: separate;
+}
+
+.table-dark.table-striped tbody tr:nth-of-type(2n+1) {
+    background-color: rgba(255, 255, 255, 0.27);
+ }
+
+#recherche {
+	display: flex;
+	flex-direction: column;
+	max-width: 60%;
+}
+
+
+@media (max-width: 768px) {
+	li {
+		font-size: 0.8rem;
+	}
+
+	.button_search {
+		width: 32%;
+	}
+
+	.btn {
+		font-size: 0.8rem;
+	}
+
+	table {
+		font-size: 1rem;
+	}
+
+	th, td {
+    	height: 1.4rem;
+	}
+
+	#stars, #planet {
+		font-size: 0.9rem;
+	}
+}
+
+@media (max-width: 576px) {
+
+	header {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.fa-bars {
+		visibility: visible;
+		color: white;
+		font-size: 20px;
+		margin-top: 3%;
+	}
+
+	.hide_menu {
+		transition: 2s right;
+		left: 150%;
+	}
+
+	.show_menu {
+		transition: 2s right;
+		left: 65%;
+	}
+
+	#menu {
+	opacity: 0.6;
+	top: 3%;
+	padding-top: 3%;
+	padding-bottom: 5%;
+	line-height: 20px;
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	z-index: 1;
+	font-size: 0.8rem;
+}
+
+	h1 {
+		font-size: 2.4rem;
+		width: 88%;
+	}
+
+	.button_search {
+		width: 43%;
+	}
+
+	.btn {
+		font-size: 0.6rem;
+	}
+
+	table {
+		font-size: 0.8rem;
+	}
+
+	th, td {
+    	height: 1.2rem;
+	}
+
+	#stars, #planet {
+		font-size: 0.8rem;
+		width: 120%;
+	}
+
+	#voir_details {
+		width: 30%;
+		text-align: left;
+	}
+
+	#name {
+		text-align: left;
+		width: 50%;
+	}

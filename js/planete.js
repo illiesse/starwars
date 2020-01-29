@@ -13,15 +13,14 @@ function load() {
 				// console.log(data)
 				var name = document.getElementById("name");
 				for (let i = 0; i < 10; i++) {
-					var name_div =document.createElement("div")
-					name.appendChild(name_div)
 
 					var name_p = document.createElement("p");
-					name_div.appendChild(name_p);
-					name_p.innerHTML+= (i+1)+"/ "+data.results[i].name+"<br>"
+					name.appendChild(name_p);
+					name_p.innerHTML+= (i+1)+"/ "+data.results[i].name
 
-					var detail_p = document.createElement("p");
-					name_div.appendChild(detail_p);
+					var detail = document.getElementById("voir_details")
+					var detail_p = document.createElement("p")
+					detail.appendChild(detail_p)
 					detail_p.innerHTML ="voir detail";
 					detail_p.addEventListener("click", function (){explain(data.results[i].url)});
 				}
@@ -34,7 +33,7 @@ function load() {
 }
 
 function explain(x) {
-	console.log(x)
+	// console.log(x)
 	fetch(x)
 	.then(
 		function (response){
@@ -48,9 +47,40 @@ function explain(x) {
 		detail.innerHTML=""
 		var detail_div =document.createElement("div");
 		detail.appendChild(detail_div)
-		detail.innerHTML= "Nom : "+data.name+"<br> Diamètre : "+data.diameter+"<br> Population : "+data.population+"<br> Résidents : "+data.residents+"<br>" 
+		detail.innerHTML= "Nom : "+data.name+"<br> Diamètre : "+data.diameter+"<br> Population : "+data.population+"<br>"
+		name_residents(data.residents) 
 		}
 	)
+}
+
+function name_residents(x) {
+	// console.log(x[0])
+	for ( i = 0; i <x.length; i++) {
+		fetch(x[i])
+		.then(
+			function (response){
+				return response.json()
+			}
+		)
+		.then(
+			data=>{
+				nam = document.createElement("p")
+				nam.innerHTML = "Résidents : "+data.name
+				var detail = document.getElementById("details");
+				detail.appendChild(nam)
+
+				y = data.name
+				console.log(y)
+		})
+	}
+
+	// data=>{
+	// 	console.log(data[O])
+		// for (let i = 0; i <data.lenght; i++) {
+		// 	// data.name[i]
+		// console.log(data[i])
+		// }
+	// }
 }
 
 var next=document.getElementById("next");
@@ -67,17 +97,19 @@ function affichage_suivant(){
 	.then(
 		data=>{
 			var name = document.getElementById("name");
-			name.innerHTML=""
+			name.innerHTML="";
+			var details = document.getElementById("details");
+			details.innerHTML="";
+			var voir_details = document.getElementById("voir_details");
+			voir_details.innerHTML="";
 			for (let i = 0; i < 10; i++) {
-				var name_div =document.createElement("div")
-				name.appendChild(name_div)
-
 				var name_p = document.createElement("p");
-				name_div.appendChild(name_p);
-				name_p.innerHTML+= (i+1)+"/ "+data.results[i].name+"<br>"
+				name.appendChild(name_p);
+				name_p.innerHTML+= (i+1)+"/ "+data.results[i].name
 
-				var detail_p = document.createElement("p");
-				name_div.appendChild(detail_p);
+				var detail = document.getElementById("voir_details")
+				var detail_p = document.createElement("p")
+				detail.appendChild(detail_p)
 				detail_p.innerHTML ="voir detail";
 				detail_p.addEventListener("click", function (){explain(data.results[i].url)});
 			}
@@ -101,17 +133,19 @@ function affichage_precedent(){
 		.then(
 			data=>{
 				var name = document.getElementById("name");
-				name.innerHTML=""
+				name.innerHTML="";
+				var details = document.getElementById("details");
+				details.innerHTML="";
+				var voir_details = document.getElementById("voir_details");
+				voir_details.innerHTML="";
 				for (let i = 0; i < 10; i++) {
-					var name_div =document.createElement("div")
-					name.appendChild(name_div)
-
 					var name_p = document.createElement("p");
-					name_div.appendChild(name_p);
-					name_p.innerHTML+= (i+1)+"/ "+data.results[i].name+"<br>"
+					name.appendChild(name_p);
+					name_p.innerHTML+= (i+1)+"/ "+data.results[i].name
 
-					var detail_p = document.createElement("p");
-					name_div.appendChild(detail_p);
+					var detail = document.getElementById("voir_details")
+					var detail_p = document.createElement("p")
+					detail.appendChild(detail_p)
 					detail_p.innerHTML ="voir detail";
 					detail_p.addEventListener("click", function (){explain(data.results[i].url)});
 				}
